@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Makeup - Gloss Matte</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Sky Makeup</a>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="tituloHome">Sky Makeup</h1>
+                <p>Descubra a nova linha GlossGlow - A primeira linha de gloss matte nacional. Pensada exatamente para o que você e seus lábios precisam!</p>
+                <a href="#products" class="cta-button">Descobrir Produtos</a>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <h2 class="section-title">Nossos Produtos</h2>
+            <div class="product-grid">
+                <div class="product-card" onclick="openProduct('gloss-matte')">
+                    <img src="img/gloss-product.jpg" alt="Gloss Matte" class="product-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjQjBFMEU2Ii8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzRBOTBFMiIgZm9udC1zaXplPSIxNiI+R2xvc3MgTWF0dGU8L3RleHQ+Cjwvc3ZnPg=='">
+                    <h3>Gloss Matte</h3>
+                    <p>A primeira linha de gloss matte nacional, desenvolvida especialmente para seus lábios.</p>
+                    <div class="product-price">R$ 29,90</div>
+                    <a href="#" class="product-button">Ver Detalhes</a>
+                </div>
+
+                <div class="product-card" onclick="openProduct('tons-collection')">
+                    <img src="img/tons-collection.jpg" alt="Coleção Tons" class="product-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjQjBFMEU2Ii8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzRBOTBFMiIgZm9udC1zaXplPSIxNiI+Q29sZcOnw6NvIFRvbnM8L3RleHQ+Cjwvc3ZnPg=='">
+                    <h3>Coleção Tons</h3>
+                    <p>4 tons incríveis: Brick-o-la, Myth, Costa Chic e Angel. Encontre o tom perfeito para você!</p>
+                    <div class="product-price">R$ 99,90</div>
+                    <a href="#" class="product-button">Ver Detalhes</a>
+                </div>
+
+                <div class="product-card" onclick="openProduct('kit-completo')">
+                    <img src="img/kit-completo.jpg" alt="Kit Completo" class="product-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjQjBFMEU2Ii8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzRBOTBFMiIgZm9udC1zaXplPSIxNiI+S2l0IENvbXBsZXRvPC90ZXh0Pgo8L3N2Zz4='">
+                    <h3>Kit Completo</h3>
+                    <p>Kit com todos os tons da linha GlossGlow em embalagem especial para presente.</p>
+                    <div class="product-price">R$ 149,90</div>
+                    <a href="#" class="product-button">Ver Detalhes</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="features-container">
+                <h2 class="section-title">Por que escolher Sky Makeup?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">✨</div>
+                        <h3>Fórmula Inovadora</h3>
+                        <p>Primeira linha de gloss matte nacional com tecnologia avançada para longa duração.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🐰</div>
+                        <h3>Cruelty Free</h3>
+                        <p>Não testamos em animais. Beleza consciente e responsável.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💋</div>
+                        <h3>Hidratação</h3>
+                        <p>Fórmula que hidrata e protege seus lábios enquanto oferece cor intensa.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Variedade de Tons</h3>
+                        <p>4 tons únicos para todos os gostos e ocasiões.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#privacy">Política de Privacidade</a>
+                <a href="#terms">Termos de Uso</a>
+                <a href="#contact">Contato</a>
+                <a href="#about">Sobre Nós</a>
+            </div>
+            <p>&copy; 2024 Sky Makeup. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
