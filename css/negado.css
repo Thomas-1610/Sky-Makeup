@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: white;
+    font-family: 'Tilt Warp', sans-serif;
+    overflow: hidden;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 56.25vh;
+    height: 100vh;
+    background: #FF4747;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.top-icon {
+    display: flex;
+    justify-content: center;
+}
+
+/* AQUI: Ajuste apenas na imagem do topo */
+.img-cartoes {
+    height: 14vh; /* aumenta o tamanho da imagem */
+    width: auto;
+    margin-top: 12vh; /* abaixa a imagem */
+}
+
+.c1 {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+}
+.content {
+    padding: 0vh 1.5vh 0px 1.5vh;
+    flex-grow: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    & .title {
+        padding: 18vh 0vh 10vh 0vh;
+        color: #e2e0e0;
+        text-align: center;
+        font-size: 2.5vh;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+    }
+}
+.opcao-grid {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    gap: 1vh;
+    overflow-y: auto;
+    max-height: 75vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.credito, .debito  {
+    width: 17vh;
+    height: 17vh;
+    padding: 1.30vh;
+    background: #FFFFFE;
+    border-radius: 2vh;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    filter: drop-shadow(0px 9px 17.3px rgba(206, 206, 206, 0.25));
+    transition: 0.1s ease;
+
+    & .opcao-imagem {
+        width: 8vh;
+        height: auto;
+        margin-top: 1vh;
+        display: block;
+    }
+    & .opcao-titulo {
+        color: #414141;
+        font-weight: 400;
+        font-size: 2vh;
+        text-align: center;
+        margin: 0vh;
+        margin-bottom: 1vh;
+        text-decoration: none;
+    }
+    &.selected {
+        border: 0.5vh solid #414141;
+    }
+}
+.credito:hover, .debito:hover {
+    background-color: #F0F0F0;
+}
+
+.ConteinerBtn {
+    display: flex;
+    gap: 1vh;
+    padding: 3vh;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+    & .NavBtn {
+        width: 100%;
+        height: 2.5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       line-height: normal;
+       
+        & a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

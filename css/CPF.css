@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: white;
+    font-family: 'Tilt Warp', sans-serif;
+    overflow: hidden;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 56.25vh;
+    height: 100vh;
+    background: #FCFCFC;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.c1 {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+}
+.content {
+    padding: 0vh 1.5vh 0vh 1.5vh;
+    flex-grow: 1; /* Garante que o conteúdo ocupe o espaço restante */
+    overflow-x: auto; /* Adiciona a barra de rolagem horizontal */
+    overflow-y: hidden;
+
+    & .title {
+        padding: 12vh 0vh 10vh 0vh;
+        color: #414141;
+        text-align: center;
+        font-size: 2.5vh;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration: none;
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+    }
+}
+.opcao-grid {
+    height: 30vh;
+    width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+    display: flex;
+    gap: 1vh;
+    overflow-y: auto;
+    max-height: 75vh;
+
+    align-items: center;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+.inputCpf {
+    width: 40vh;
+    height: 5vh;
+    padding: 1.30vh;
+    background: #FFFFFE;
+    border-radius: 1.5vh;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui o conteúdo com espaço entre eles */
+    align-items: center; /* Centraliza horizontalmente */
+    filter: drop-shadow(0px 9px 17.3px rgba(206, 206, 206, 0.25));
+    transition: 0.1s ease;
+    border: 0.4vh solid #4a4a4a; /* Borda */
+    font-family: 'Tilt Warp', sans-serif; /* Apply project font */
+    font-weight: 300; /* Reduce font weight */
+    
+}
+
+.ConteinerBtn {
+    display: flex;
+    gap: 1vh;
+    padding: 3vh;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente, caso necessário */
+    height: auto;
+
+& .NavBtn {
+    width: 100%;
+    height: 2.5vh;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo dentro de cada botão */
+    align-items: center;
+    transition: 3s;
+
+    & #cancelar{
+        width: 20vh;
+        height: 4.4vh;
+        margin: 0 auto;
+        color: #414141;
+        text-align: center;
+        font-size: 2vh;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+        border-radius: 1.5vh;
+        border: 0.5vh solid #414141;
+    }
+
+    & .btnProsseguir{
+
+        width: 20vh;
+        height: 4.4vh;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 2vh;
+        font-weight: 300; /* Reduce font weight */
+        line-height: normal;
+        text-decoration: none;
+        border-radius: 1.5vh;
+        background-color: #9FD942;
+        color: #ffffff ;
+        cursor: pointer;
+        border: 0.5vh solid #9FD942;
+        font-family: 'Tilt Warp', sans-serif; /* Apply project font */
+    }
+
+
+    & a {
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+    }
+
+    }
+    
+ 
+}
+.teclado {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+.linha-teclas {
+    display: flex;
+    gap: 1vh;
+}
+
+.tecla {
+    width: 10vh;
+    height: 6vh;
+    font-size: 2.5vh;
+    border-radius: 1.5vh;
+    border: 0.4vh solid #4a4a4a;
+    background-color: #f1f1f1;
+    color: #414141;
+    cursor: pointer;
+    font-family: 'Tilt Warp', sans-serif;
+    transition: background-color 0.2s;
+}
+
+.tecla:hover {
+    background-color: #dedede;
+}
+
+.tecla.apagar {
+     border: 0.4vh solid #4a4a4a;
+    background-color: #f1f1f1;
+}
+
+.tecla.limpar {
+     border: 0.4vh solid #4a4a4a;
+    background-color: #f1f1f1;
+}
