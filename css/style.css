@@ -4,7 +4,7 @@
 :root {
     --primary-blue: #4A90E2;
     --light-blue: #87CEEB;
-    --powder-blue: #B0E0E6;
+    --powder-blue: #d4f4f9;
     --white: #FFFFFF;
     --dark-blue: #2C5F8A;
     --accent-pink: #F8BBD9;
@@ -97,7 +97,6 @@ nav {
 /* Main Content */
 main {
     margin-top: 80px;
-    padding: 2rem 0;
 }
 
 /* Hero Section */
@@ -199,8 +198,8 @@ main {
 }
 
 .product-card {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 20px;
+    background: rgba(248, 248, 248, 0.9);
+    border-radius: 18px;
     padding: 2rem;
     text-align: center;
     box-shadow: 0 10px 30px rgba(74, 144, 226, 0.1);
@@ -234,7 +233,7 @@ main {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 13px;
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
 }
@@ -245,7 +244,7 @@ main {
 
 .product-card h3 {
     font-size: 1.5rem;
-    color: var(--primary-blue);
+    color: var(--dark-blue);
     margin-bottom: 1rem;
 }
 
@@ -284,7 +283,7 @@ main {
 .features {
     background: rgba(255, 255, 255, 0.8);
     padding: 4rem 0;
-    margin: 4rem 0;
+  
 }
 
 .features-container {
@@ -307,10 +306,22 @@ main {
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 5px 20px rgba(74, 144, 226, 0.1);
     transition: transform 0.3s ease;
+
+    height: 90vh;
 }
 
 .feature-item:hover {
     transform: translateY(-5px);
+}
+
+.card{
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 20px rgba(74, 144, 226, 0.1);
+    transition: transform 0.3s ease;
+    height: 90vh;
 }
 
 .feature-icon {
@@ -329,6 +340,25 @@ main {
 .feature-item h3 {
     color: var(--primary-blue);
     margin-bottom: 1rem;
+}
+
+.feature-item-bg {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.feature-item-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(39, 116, 179, 0.217); /* escurece para melhor contraste */
+    z-index: 0;
+}
+.feature-item-bg > * {
+    position: relative;
+    z-index: 1;
 }
 
 /* Footer */

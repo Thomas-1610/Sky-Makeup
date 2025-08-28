@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky Makeup - Gloss Matte</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/Carrossel.css">
 </head>
 <body>
     <header>
@@ -20,13 +21,50 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 class="tituloHome">Sky Makeup</h1>
-                <p>Descubra a nova linha GlossGlow - A primeira linha de gloss matte nacional. Pensada exatamente para o que você e seus lábios precisam!</p>
-                <a href="#products" class="cta-button">Descobrir Produtos</a>
+        <section>
+            <div class="carrossel">
+                <button class="carrossel-btn prev" onclick="mudarSlide(-1)">↽</button>
+                <div class="carrossel-slides">
+                    <img src="../img/carrossel1.jpeg" class="carrossel-img" alt="Banner 1">
+                    <img src="img/carrossel2.jpg" class="carrossel-img" alt="Banner 2">
+                    <img src="img/carrossel3.jpg" class="carrossel-img" alt="Banner 3">
+                </div>
+                <button class="carrossel-btn next" onclick="mudarSlide(1)">⇀</button>
+                <div class="carrossel-dots">
+                    <span class="dot" onclick="irParaSlide(0)"></span>
+                    <span class="dot" onclick="irParaSlide(1)"></span>
+                    <span class="dot" onclick="irParaSlide(2)"></span>
+                </div>
             </div>
         </section>
+
+
+
+
+        <section class="features">
+            <div class="features-container">
+                <h2 class="section-title">Por que escolher Sky Makeup?</h2>
+                <div class="features-grid">
+                    <div class="feature-item feature-item-bg" style="background-image: url('../img/carrossel1.jpg');">
+                        <div class="feature-icon">✨</div>
+                        <h3>Pele</h3>
+                        <p>Primeira linha de gloss matte nacional com tecnologia avançada para longa duração.</p>
+                    </div>
+                     <div class="feature-item feature-item-bg" style="background-image: url('../img/carrossel2.jpg');">
+                        <div class="feature-icon">🐰</div>
+                        <h3>Selagem</h3>
+                        <p>Não testamos em animais. Beleza consciente e responsável.</p>
+                    </div>
+                     <div class="feature-item feature-item-bg" style="background-image: url('../img/carrossel3.jpg');">
+                        <div class="feature-icon">💋</div>
+                        <h3>Lábios</h3>
+                        <p>Fórmula que hidrata e protege seus lábios enquanto oferece cor intensa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
         <section id="products" class="products">
             <h2 class="section-title">Nossos Produtos</h2>
@@ -55,35 +93,18 @@
                     <a href="#" class="product-button">Ver Detalhes</a>
                 </div>
             </div>
-        </section>
 
-        <section class="features">
-            <div class="features-container">
-                <h2 class="section-title">Por que escolher Sky Makeup?</h2>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">✨</div>
-                        <h3>Fórmula Inovadora</h3>
-                        <p>Primeira linha de gloss matte nacional com tecnologia avançada para longa duração.</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🐰</div>
-                        <h3>Cruelty Free</h3>
-                        <p>Não testamos em animais. Beleza consciente e responsável.</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">💋</div>
-                        <h3>Hidratação</h3>
-                        <p>Fórmula que hidrata e protege seus lábios enquanto oferece cor intensa.</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🎨</div>
-                        <h3>Variedade de Tons</h3>
-                        <p>4 tons únicos para todos os gostos e ocasiões.</p>
-                    </div>
-                </div>
+
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="tituloHome">Sky Makeup</h1>
+                <p>Descubra a nova linha GlossGlow - A primeira linha de gloss matte nacional. Pensada exatamente para o que você e seus lábios precisam!</p>
+                <a href="#products" class="cta-button">Descobrir Produtos</a>
             </div>
         </section>
+        </section>
+
+
     </main>
 
     <footer>
@@ -99,6 +120,37 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        let slideAtual = 0;
+        const slides = document.querySelectorAll('.carrossel-img');
+        const dots = document.querySelectorAll('.dot');
+
+        function mostrarSlide(n) {
+            if (!slides.length) return;
+            slideAtual = (n + slides.length) % slides.length;
+            slides.forEach((img, i) => {
+                img.style.display = i === slideAtual ? 'block' : 'none';
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('ativo', i === slideAtual);
+            });
+        }
+
+        function mudarSlide(n) {
+            mostrarSlide(slideAtual + n);
+        }
+
+        function irParaSlide(n) {
+            mostrarSlide(n);
+        }
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarSlide(slideAtual);
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>
 
