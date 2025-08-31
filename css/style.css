@@ -4,7 +4,7 @@
 :root {
     --primary-blue: #4A90E2;
     --light-blue: #87CEEB;
-    --powder-blue: #d4f4f9;
+    --powder-blue: #ffffff;
     --white: #FFFFFF;
     --dark-blue: #2C5F8A;
     --accent-pink: #F8BBD9;
@@ -445,6 +445,7 @@ footer {
 }
 
 .product-detail-content {
+    padding-top: 3.5vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -567,4 +568,9 @@ footer {
 
 .tituloHome{
     color: #333333;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-dark);
 }

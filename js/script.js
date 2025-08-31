@@ -165,7 +165,7 @@ function showNotification(message, type = 'info') {
         position: fixed;
         top: 100px;
         right: 20px;
-        background: ${type === 'success' ? '#4CAF50' : '#2196F3'};
+        background: ${type === 'success' ? '#62cc65ff' : '#2196F3'};
         color: white;
         padding: 1rem 2rem;
         border-radius: 25px;
