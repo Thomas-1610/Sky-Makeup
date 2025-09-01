@@ -22,7 +22,7 @@
     display: none;
     transition: opacity 0.5s;
     border-radius: 0;
-    transition: 3s;
+    transition: 1s;
 }
 
 .carrossel-btn {
